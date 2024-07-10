@@ -15,7 +15,7 @@ const Contact = () => {
                 </h2>
                 <p className="text-sm xl:text-base  text-default-700">
                   If you have any questions or encounter issues with our script,
-                  our support team is available to assist you. They'll respond
+                  our support team is available to assist you. Theyll respond
                   to inquiries and provide limited support through our dedicated
                   support system.
                 </p>

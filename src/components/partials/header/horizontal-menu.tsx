@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/src/components/ui/tabs";
 import image from "@/public/images/all-img/man-with-laptop.png";
 import Image from "next/image";
+
 export default function MainMenu({ trans }: { trans: any }) {
   const menus = menusConfig.mainNav || [];
 
@@ -17,7 +18,6 @@ export default function MainMenu({ trans }: { trans: any }) {
   const onNodeUpdate = (trigger: any, itemValue: any) => {
     if (trigger && list && value === itemValue) {
       const triggerOffsetLeft = trigger.offsetLeft + trigger.offsetWidth / 6;
-
       setOffset(Math.round(triggerOffsetLeft));
     } else if (value === "") {
       setOffset(null);
@@ -45,7 +45,6 @@ export default function MainMenu({ trans }: { trans: any }) {
                 <div className=" flex items-center  py-4 cursor-pointer group data-[state=open]:text-primary">
                   <item.icon className="h-5 w-5 mr-2" />
                   <span className="text-sm font-medium text-default-700">
-                    {/* {translate(item.title, trans)} */}
                     {item.title}
                   </span>
                   <ChevronDown
@@ -187,3 +186,6 @@ const ListItem = React.forwardRef<HTMLAnchorElement, any>(
     </NavigationMenu.Link>
   )
 );
+
+ListItem.displayName = "ListItem";
+MainMenu.displayName = "MainMenu";

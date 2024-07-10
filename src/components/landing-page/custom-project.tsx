@@ -67,7 +67,7 @@ const CustomProject = () => {
           Work with <span className="text-primary">Us</span>
         </h2>
         <p className="text-sm xl:text-base leading-7 text-center text-default-700 ">
-          Since 2017, we've been helping developers, entrepreneurs, startups,
+          Since 2017, weve been helping developers, entrepreneurs, startups,
           and government agencies. Count on CodeShaper to provide a tailored
           transformation that fits your business goals perfectly.
         </p>
