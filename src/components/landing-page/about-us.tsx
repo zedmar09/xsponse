@@ -7,7 +7,7 @@ import label3 from "@/public/images/landing-page/label-3.png"
 import label4 from "@/public/images/landing-page/label-4.png"
 import label5 from "@/public/images/landing-page/label-5.png"
 import featured from "@/public/images/landing-page/featured.png"
-import { cn } from "@/lib/utils"
+import { cn } from "@/src/lib/utils"
 const AboutUs = () => {
   const data = [
     {

@@ -1,7 +1,7 @@
 import React from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { menus, type Menu } from "./../data";
-import { cn } from "@/lib/utils";
+import { cn } from "@/src/lib/utils";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 

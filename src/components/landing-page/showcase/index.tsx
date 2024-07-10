@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/src/components/ui/card";
 import { demoMenus } from "./../data";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/src/lib/utils";
 import ShowCaseContent from "./showcase-content";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/src/components/ui/tabs";

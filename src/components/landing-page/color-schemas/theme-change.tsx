@@ -1,7 +1,7 @@
-import { useThemeStore } from "@/store";
-import { cn } from "@/lib/utils";
+import { useThemeStore } from "@/src/store";
+import { cn } from "@/src/lib/utils";
 import React from "react";
-import { themes } from "@/config/thems";
+import { themes } from "@/src/config/thems";
 import { useTheme } from "next-themes";
 import { Check } from "lucide-react";
 

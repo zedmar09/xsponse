@@ -1,6 +1,6 @@
 "use client"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/src/lib/utils";
 import { Application, Authentication, ChartBar, Components, DashBoard, Map } from "@/src/components/svg";
 
 const Stats = () => {

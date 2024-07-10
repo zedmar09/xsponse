@@ -10,7 +10,7 @@ import NavMenu from "./nav-menu";
 import { Icon } from "@iconify/react";
 import { menus } from "./../data";
 import { ChevronDown, Menu } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/src/lib/utils";
 const Header = () => {
   const [scroll, setScroll] = useState<boolean>(false);
   useEffect(() => {
