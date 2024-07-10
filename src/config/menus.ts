@@ -1,4 +1,3 @@
-
 import {
   Graph,
   Stacks2,
@@ -14,6 +13,7 @@ import {
   Pointer,
   ClipBoard2
 } from "@/src/components/svg";
+
 export interface MenuItemProps {
   title: string;
   icon: any;
@@ -22,13 +22,12 @@ export interface MenuItemProps {
   megaMenu?: MenuItemProps[];
   multi_menu? : MenuItemProps[]
   nested?: MenuItemProps[]
-  onClick: () => void;
-  
+  onClick?: () => void;
 }
 
 export const menusConfig = {
   mainNav: [
-      {
+    {
       title: "Dashboard",
       icon: Graph,
       child: [
@@ -76,7 +75,6 @@ export const menusConfig = {
         },
       ]
     },
-
     {
       title: "Document Management",
       icon: Files,
@@ -88,7 +86,6 @@ export const menusConfig = {
         },
       ]
     },
-
     {
       title: "Update Manager",
       icon: Pointer,
@@ -122,6 +119,18 @@ export const menusConfig = {
             title: "Analytics",
             icon: Application,
             href: "#",
+            nested: [
+              {
+                title: "Sub-Analytics 1",
+                icon: Application,
+                href: "#",
+              },
+              {
+                title: "Sub-Analytics 2",
+                icon: Application,
+                href: "#",
+              },
+            ],
           },
         ]
       },
@@ -138,6 +147,18 @@ export const menusConfig = {
             title: "Customers",
             icon: User,
             href: "/users_management/customers/customer_list",
+            nested: [
+              {
+                title: "Sub-Customers 1",
+                icon: User,
+                href: "#",
+              },
+              {
+                title: "Sub-Customers 2",
+                icon: User,
+                href: "#",
+              },
+            ],
           },
           {
             title: "System Users",
@@ -164,7 +185,7 @@ export const menusConfig = {
       },
     ],
     classic: [
-       {
+      {
         isHeader: true,
         title: "menu",
       },
@@ -219,7 +240,6 @@ export const menusConfig = {
     ],
   },
 };
-
 
 export type ModernNavType = (typeof menusConfig.sidebarNav.modern)[number]
 export type ClassicNavType = (typeof menusConfig.sidebarNav.classic)[number]

@@ -8,7 +8,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/src/components/xsponse/select";
+} from "@/src/components/xsponse/ui/select";
 import { Table } from "@tanstack/react-table";
 
 interface DataTablePaginationProps {

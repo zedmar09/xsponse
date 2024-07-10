@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/src/components/xsponse/ui/button";
-import { menusConfig } from "@/config/menus";
+import { menusConfig } from "@/src/config/menus";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";

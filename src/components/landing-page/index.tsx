@@ -7,7 +7,7 @@ import ProjectTools from "./project-tools";
 import AllComponents from "./all-components";
 import FigmaKit from "./figma-kit";
 import CustomProject from "./custom-project";
-import { useMounted } from "@/hooks/use-mounted";
+import { useMounted } from "@/src/hooks/use-mounted";
 import LayoutLoader from "@/src/components/layout-loader";
 import AboutDashtail from "./about-dashtail";
 import Faq from "./faq";

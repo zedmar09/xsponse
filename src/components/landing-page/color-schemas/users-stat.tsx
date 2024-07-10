@@ -4,10 +4,10 @@ import { Icon } from "@iconify/react";
 
 import dynamic from "next/dynamic";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
-import { useThemeStore } from "@/store";
+import { useThemeStore } from "@/src/store";
 import { useTheme } from "next-themes";
-import { themes } from "@/config/thems";
-import { getGridConfig } from "@/lib/appex-chart-options";
+import { themes } from "@/src/config/thems";
+import { getGridConfig } from "@/src/lib/appex-chart-options";
 
 const UsersStat = () => {
   const { theme: config, setTheme: setConfig } = useThemeStore();

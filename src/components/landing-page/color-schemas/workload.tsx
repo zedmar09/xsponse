@@ -1,7 +1,7 @@
 "use client";
-import { useThemeStore } from "@/store";
+import { useThemeStore } from "@/src/store";
 import { useTheme } from "next-themes";
-import { themes } from "@/config/thems";
+import { themes } from "@/src/config/thems";
 import { ResponsiveContainer, BarChart, Bar, LabelList, XAxis } from "recharts";
 import {
   Card,

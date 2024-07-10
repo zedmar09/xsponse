@@ -65,8 +65,8 @@ export const authProvider: AuthBindings = {
 
       let redirectTo = "/";
       // if (
-      //   (user as LoginResponse).roles.includes("admin") ||
-      //   (user as LoginResponse).roles.includes("super-admin")
+      //   (user as LoginResponse).user.role.includes("admin") ||
+      //   (user as LoginResponse).user.role.includes("super-admin")
       // ) {
       //   redirectTo = "/admin";
       // }
@@ -130,8 +130,8 @@ export const authProvider: AuthBindings = {
     if (auth) {
       const parsedUser = JSON.parse(auth) as LoginResponse;
       return {
-        role: parsedUser.roles,
-        permissions: parsedUser.permissions,
+        role: parsedUser.user.role,
+        permissions: [], // Replace with actual permissions if available in your user object
       };
     }
     return null;

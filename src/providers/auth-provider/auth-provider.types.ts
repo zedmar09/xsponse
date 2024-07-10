@@ -7,6 +7,8 @@ export type LoginResponse = {
     role: string;
     phone_number: string;
     email: string;
+    roles: string[];
+    permissions: string[];
   };
   token: string;
 };
