@@ -15,7 +15,7 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 
-import { Button } from "@/src/components/ui/button";
+import { Button } from "@/src/components/xsponse/ui/button";
 
 import {
   Table,
