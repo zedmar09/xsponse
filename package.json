@@ -83,7 +83,6 @@
     "apexcharts": "^3.42.0",
     "autoprefixer": "10.4.15",
     "axios": "^1.6.1",
-    "bcrypt": "^5.1.1",
     "chart.js": "^4.4.0",
     "class-variance-authority": "^0.7.0",
     "cleave.js": "^1.6.0",
@@ -100,6 +99,7 @@
     "emoji-mart": "^5.5.2",
     "eslint": "8.48.0",
     "eslint-config-next": "14.0.1",
+    "fix-esm": "^1.0.1",
     "framer-motion": "^10.16.3",
     "google-map-react": "^2.2.1",
     "html-to-image": "^1.11.11",
@@ -167,5 +167,9 @@
   },
   "refine": {
     "projectId": "XyJHn5-c3hzle-tLfUfs"
+  },
+  "resolutions": {
+    "string-width": "^4.2.0",
+    "wrap-ansi": "^7.0.0"
   }
 }
