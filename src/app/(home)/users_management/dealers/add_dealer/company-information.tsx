@@ -34,7 +34,7 @@ const CompanyInformation = () => {
           <Label className="mb-2">
             Company Website <RequiredLabel />
           </Label>
-          <Input type="text" placeholder="Enter  Company Website" required />
+          <Input type="url" placeholder="Enter Company Website" required />
         </div>
 
         <div className="flex flex-col">
@@ -54,6 +54,22 @@ const CompanyInformation = () => {
         </CardHeader>
         <CardContent>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+
+        <div className="col-span-1 lg:col-span-2 mb-2">
+        <Label className="">
+            Address Line 1 <RequiredLabel />
+          </Label>
+          <Input type="text" placeholder="Enter Address Line 1 " required />
+        </div>
+
+        <div className="col-span-1 lg:col-span-2 mb-2">
+        <Label className="">
+            Address Line 2
+          </Label>
+          <Input type="text" placeholder="Enter Address Line 2 " />
+        </div>
+
+
         <div className="flex flex-col mb-2">
           <Label className="mb-2">
             State <RequiredLabel />

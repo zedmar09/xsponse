@@ -30,7 +30,7 @@ const BasicTabs = () => {
         </div>
       </div>
 
-      <div className="w-full flex justify-end mb-5">
+      {/* <div className="w-full flex justify-end mb-5">
         <Button className="mr-3" color="success">
           <Icon icon="flowbite:check-circle-solid" className="w-6 h-6 mr-2  " />
           Accept
@@ -40,16 +40,27 @@ const BasicTabs = () => {
           <Icon icon="bxs:x-circle" className="w-6 h-6 mr-2  " color = 'destructive' />
           Decline
         </Button>
-      </div>
+      </div> */}
 
-      <form className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div className="col-span-1">
-          <CompanyInformation />
-        </div>
-        <div className="col-span-1">
-          <ContactInformation />
-        </div>
-      </form>
+<form className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+  <div className="col-span-1">
+    <CompanyInformation />
+  </div>
+  <div className="col-span-1">
+    <ContactInformation />
+  </div>
+  <div className="col-span-full w-full flex justify-end mb-5">
+    <Button className="mr-3" color="success" type="submit">
+      <Icon icon="flowbite:check-circle-solid" className="w-6 h-6 mr-2" />
+      Save
+    </Button>
+    <Button>
+      <Icon icon="bxs:x-circle" className="w-6 h-6 mr-2" color='destructive' />
+      Cancel
+    </Button>
+  </div>
+</form>
+
     </>
   );
 };
