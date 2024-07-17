@@ -6,7 +6,7 @@ import React from "react";
 const ApplicationTitle = () => { 
   return (
     <>
-    <form>
+  
     <div className="w-full flex flex-col">
       <div className="2xl:text-3xl text-2xl font-bold text-default-900">
        Dealer Application Form 
@@ -24,7 +24,7 @@ const ApplicationTitle = () => {
        <span className="text-default-400">Dealer Email:</span> <span className="text-primary font-bold">dealersample@xsponse.com</span>
       </div>
     </div>
-    </form>
+ 
     </>
   );
 };

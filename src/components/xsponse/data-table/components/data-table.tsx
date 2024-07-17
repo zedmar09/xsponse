@@ -26,10 +26,12 @@ import {
 } from "@/src/components/ui/table";
 
 import { DataTablePagination } from "./data-table-pagination";
+
 interface DataTableProps<TData> {
   columns: ColumnDef<TData>[];
   data: TData[];
 }
+
 export function DataTable<TData>({ columns, data }: DataTableProps<TData>) {
   const [rowSelection, setRowSelection] = React.useState({});
   const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
@@ -64,19 +66,17 @@ export function DataTable<TData>({ columns, data }: DataTableProps<TData>) {
         <Table>
           <TableHeader className="bg-default-100">
             {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow key={headerGroup.id}>
-                {headerGroup.headers.map((header) => {
-                  return (
-                    <TableHead key={header.id} colSpan={header.colSpan}>
-                      {header.isPlaceholder
-                        ? null
-                        : flexRender(
+              <TableRow key={headerGroup.id} className="p-2"> {/* Remove padding */}
+                {headerGroup.headers.map((header) => (
+                  <TableHead key={header.id} colSpan={header.colSpan} className="p-2"> {/* Remove padding */}
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(
                           header.column.columnDef.header,
                           header.getContext()
                         )}
-                    </TableHead>
-                  );
-                })}
+                  </TableHead>
+                ))}
               </TableRow>
             ))}
           </TableHeader>
@@ -86,9 +86,10 @@ export function DataTable<TData>({ columns, data }: DataTableProps<TData>) {
                 <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
+                  className="p-2" // Remove padding
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
+                    <TableCell key={cell.id} className="p-2"> {/* Remove padding */}
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
@@ -98,10 +99,10 @@ export function DataTable<TData>({ columns, data }: DataTableProps<TData>) {
                 </TableRow>
               ))
             ) : (
-              <TableRow>
+              <TableRow className="p-0"> {/* Remove padding */}
                 <TableCell
                   colSpan={columns.length}
-                  className="h-24 text-center"
+                  className="h-24 text-center p-0" // Remove padding
                 >
                   No results.
                 </TableCell>

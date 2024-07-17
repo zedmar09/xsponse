@@ -13,13 +13,15 @@ import {
     SelectValue,
   } from "@/src/components/xsponse/ui/select";
   import { Card, CardContent, CardHeader, CardTitle, CardFooter, CardDescription } from "@/src/components/ui/card";
+  import { keyInterest } from "@/src/components/xsponse/data-table/data/key-interest";
+  import ComboBox from "@/src/components/xsponse/ui/combo-box";
 
-const ApplicationCompany = () => {
+const CompanyInfo = () => {
 
   return (
-   <>
-   
-   <div className="w-full flex flex-col">
+    <Card>
+      <CardContent>
+      <div className="w-full flex flex-col pt-5">
         <div className="2xl:text-xl text-xl text-default-900">
           Company Information
         </div>
@@ -83,11 +85,25 @@ const ApplicationCompany = () => {
           <Input type="number" placeholder="Enter Number of Technician" required />
         </div>
 
-        
+
+        <div className="col-span-1 lg:col-span-2 mb-2">
+        <Label className="mb-2">
+              Key Offering Interested In <RequiredLabel />
+            </Label>
+            <ComboBox
+              items={keyInterest?.map((interest) => ({
+                value: interest.value,
+                  label: interest.label,
+              }))}
+              placeholder="Select Key Interest"
+            />
+        </div>
       </div>  
-   </>
+      </CardContent>
+        
     
+    </Card>
   );
 };
 
-export default ApplicationCompany;
+export default CompanyInfo;

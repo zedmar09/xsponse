@@ -5,12 +5,10 @@ import auth3Light from "@/public/images/auth/auth3-light.png";
 import auth3Dark from "@/public/images/auth/auth3-dark.png";
 import Image from "next/image";
 import XsponseLogo from "@/public/xsponse/xsponse_logo.svg";
-import ApplicationTitle from "./application-title";
-import ApplicationPrimary from "./application-primary";
 import ApplicationCompany from "./application-company";
-import ApplicationPartner from "./application-partner";
-import ApplicationSpecialty from "./application-specialty";
-import ApplicationOther from "./application-other";
+import ContactInformation from "./contact-information";
+import ApplicationTitle from "../../../../dealer-application/application-title";
+
 
 interface SectionWrapperProps {
   children: ReactNode;
@@ -18,13 +16,13 @@ interface SectionWrapperProps {
 
 const SectionWrapper: React.FC<SectionWrapperProps> = ({ children }) => (
   <div className="w-full flex justify-center items-center z-10">
-    <div className="bg-background py-5 w-full max-w-custom rounded-md relative 2xl:p-8 xl:p-5 p-5 m-4" style={{ maxWidth: "900px" }}>
+    <div className="bg-background py-5 w-full max-w-custom rounded-md relative 2xl:p-8 xl:p-5 p-5 m-4" style={{ maxWidth: "1500px" }}>
       {children}
     </div>
   </div>
 );
 
-export default function ApplicationDealer() {
+export default function ProfilePending() {
   return (
     <div className="loginwrapper flex flex-col justify-center items-center relative overflow-hidden min-h-screen pb-10">
       <Image
@@ -42,39 +40,28 @@ export default function ApplicationDealer() {
       </div>
 
       <form>
-        <SectionWrapper>
-          <ApplicationTitle />
+
+      <SectionWrapper>
+         <ApplicationTitle />
         </SectionWrapper>
 
         <SectionWrapper>
-          <ApplicationPrimary />
+         <ApplicationCompany />
         </SectionWrapper>
 
         <SectionWrapper>
-          <ApplicationCompany />
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <ApplicationPartner />
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <ApplicationSpecialty />
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <ApplicationOther />
+        <ContactInformation />
         </SectionWrapper>
 
         <div className="w-full flex justify-center items-center z-10">
           <div className="w-full flex justify-end z-10">
 
-          <Button className="mr-3" color="destructive">
-              Logout
+          <Button className="mr-3" color="success" type="submit">
+              Approve Application
             </Button>
 
-            <Button className="mr-3" color="success" type="submit">
-              Submit Application
+          <Button className="mr-3" color="destructive">
+              Decline Application
             </Button>
           </div>
         </div>

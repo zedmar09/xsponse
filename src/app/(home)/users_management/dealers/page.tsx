@@ -11,11 +11,16 @@ import {
   BreadcrumbItem,
 } from "@/src/components/xsponse/ui/breadcrumbs";
 import PageHeading from "@/src/components/xsponse/text/page-heading";
-import DealerDataTable from "./dealer-data-table";
-import DealerFilters from "./dealer-filters";
-import {Suspense} from 'react';
+// import DealerDataTable from "./old-table/dealer-data-table";
+// import DealerFilters from "./old-table/dealer-filters";
+import { Suspense } from "react";
+import ApproveDealerDataTable from "./data-table/approved-dealer";
+import PartialApproveDealerDataTable from "./data-table/partial-approved-dealer";
+import PendingDealerDataTable from "./data-table/pending-dealer";
+import DeclinedDealerDataTable from "./data-table/declined-dealer";
+import DealerListFilters from "./data-table-filters/dealer-list-filters";
 
-export default async function Dealer() {
+export default function Dealer() {
   return (
     <Suspense>
       <div className="mb-5">
@@ -50,27 +55,33 @@ export default async function Dealer() {
             </TabsTrigger>
           </TabsList>
 
-          <div className="border border-dashed border-default-200 my-5"></div>       
+          <div className="border border-dashed border-default-200 my-5"></div>
           <TabsContent value="Dealer_List">
-            <DealerFilters />
-            <DealerDataTable />
+            {/* <DealerFilters />
+            <DealerDataTable /> */}
+            <DealerListFilters withPricingLevel={true} />
+            <ApproveDealerDataTable />
           </TabsContent>
           <TabsContent value="Partially_Approved">
-          <DealerFilters />
-            <DealerDataTable />
+            {/* <DealerFilters />
+            <DealerDataTable /> */}
+            <DealerListFilters withPricingLevel={false} />
+            <PartialApproveDealerDataTable />
           </TabsContent>
           <TabsContent value="Pending_Application">
-          <DealerFilters />
-            <DealerDataTable />
+            {/* <DealerFilters />
+            <DealerDataTable /> */}
+            <DealerListFilters withPricingLevel={false} />
+            <PendingDealerDataTable />
           </TabsContent>
           <TabsContent value="Declined_Application">
-          <DealerFilters />
-            <DealerDataTable />
+            {/* <DealerFilters />
+            <DealerDataTable /> */}
+            <DealerListFilters withPricingLevel={false} />
+            <DeclinedDealerDataTable />
           </TabsContent>
         </Tabs>
       </Card>
     </Suspense>
   );
-};
-
-
+}
